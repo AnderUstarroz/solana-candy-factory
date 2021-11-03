@@ -35,7 +35,7 @@ export const RecaptchaButton = ({
 
   return <button
     type="button"
-    className="text-black font-bold text-lg cursor-pointer"
+    className="wallet-adapter-button wallet-adapter-button-trigger font-bold text-lg cursor-pointer"
     disabled={disabled}
     onClick={handleReCaptchaVerify}>{validating ? 'Validating you are not a bot...' : children}</button>;
 };

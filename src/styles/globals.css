@@ -21,3 +21,7 @@ body,
   overflow: auto;
   color   : white;
 }
+.main-title{
+  color:#7a205b;
+  text-transform: uppercase;
+}

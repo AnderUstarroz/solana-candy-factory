@@ -22,7 +22,7 @@ const Home = () => {
     <main className="p-5">
       <Toaster />
       <Head>
-        <title>Solana Candy Factory</title>
+        <title>Cubist Collective</title>
         <meta name="description" content="Solana blockchain candy machine app boilerplate on top of Metaplex Candy Machine. NextJS, Tailwind, Anchor, SolanaLabs.React, dev/mainnet automation scripts." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -31,15 +31,15 @@ const Home = () => {
 
       <div className="flex flex-col justify-center items-center flex-1 space-y-3 mt-20">
         <img
-          className="rounded-md shadow-lg"
-          src={`/candy.jpeg`}
+          className="rounded-md"
+          src={`/cubist.png`}
           height={200}
           width={200}
-          alt="Candy Image" />
+          alt="Cubist Collective" />
 
-        <span className="text-gray-800 font-bold text-2xl cursor-default">
-          THIS IS THE BEST CANDY MACHINE EVER
-        </span>
+        <div className="main-title text-gray-800 font-bold text-3xl cursor-default">
+        <span>Cubist</span> Collective
+        </div>
 
         {!wallet.connected && <span
           className="text-gray-800 font-bold text-2xl cursor-default">
@@ -53,7 +53,7 @@ const Home = () => {
         {wallet.connected &&
           <>
             <p className="text-gray-800 font-bold text-lg cursor-default">Balance: {(balance || 0).toLocaleString()} SOL</p>
-            <p className="text-gray-800 font-bold text-lg cursor-default">Available/Minted/Total: {nftsData.itemsRemaining}/{nftsData.itemsRedeemed}/{nftsData.itemsAvailable}</p>
+            <p className="text-gray-800 font-bold text-lg cursor-default">Available: {nftsData.itemsRemaining}/{nftsData.itemsAvailable}</p>
           </>
         }
 
@@ -78,7 +78,7 @@ const Home = () => {
             </RecaptchaButton>
           }
 
-          {wallet.connected &&
+          {/* {wallet.connected &&
             <RecaptchaButton
               actionName="mint5"
               disabled={isSoldOut || isMinting || !isActive}
@@ -96,7 +96,7 @@ const Home = () => {
                 />
               }
             </RecaptchaButton>
-          }
+          } */}
         </div>
         <Footer />
       </div>
